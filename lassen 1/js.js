@@ -1,7 +1,7 @@
 let money = prompt("Ваш бюджет?", 9999999);
 let shopName = prompt("Название вашего магазина?");
 let Goods = [];
-let time = 19
+let time = 19;
 
 let mainList = {
 	buget: money,
@@ -15,7 +15,7 @@ for (let i = 0; i < 5; i++) {
 
 	let a = prompt("Какой тип товара будем продавать?");
 
-	if ((typeof(a)) === 'string' && (typeof(a)) === null && a != '' && a.length < 50) {
+	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 		mainList.shopGoods[i] = a;
 	} else {
