@@ -1,10 +1,10 @@
-var buget1 = prompt("Ваш бюджет?", 9999999);
-var name1 = prompt("Название вашего магазина?");
+var money = prompt("Ваш бюджет?", 9999999);
+var shopName = prompt("Название вашего магазина?");
 var Goods = [];
 
 mainList = {
-	buget: buget1,
-	name: name1,
+	buget: money,
+	name: shopName,
 	shopGoods: Goods, 
 	employers: {},
 	open: true
