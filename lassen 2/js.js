@@ -41,13 +41,15 @@ if (time < 0) {
 			console.log('В сутках только 24 часа!');
 		};
 
-/*while (time < 20) {
-	console.log(time);
-	time++;
-}*/
+/* while (Goods < 5) {
+	let a = prompt("Какой тип товара будем продавать?");
+	Goods++;
+	mainList.shopGoods[Goods] = a;
+} */
 
 /*do {
-	console.log(time);
-	time++;
+	let a = prompt("Какой тип товара будем продавать?");
+	Goods++;
+	mainList.shopGoods[Goods] = a;
 }
-while (time <20); */
+while (Goods < 5); */ 
