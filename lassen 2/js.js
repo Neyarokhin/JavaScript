@@ -1,7 +1,7 @@
 let money = prompt("Ваш бюджет?", 9999999);
 let shopName = prompt("Название вашего магазина?");
 let Goods = [];
-let time = 19;
+let time = 9;
 
 let mainList = {
 	buget: money,
@@ -10,6 +10,8 @@ let mainList = {
 	employers: {},
 	open: true
 }
+
+
 
 console.log("ежедневный бюджет " + mainList.buget / 30);
 
@@ -22,9 +24,12 @@ for (let i = 0; i < 5; i++) {
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 		mainList.shopGoods[i] = a;
-	} else  
+	} else  {
+		i = i - 1;
+	}
 
-}
+} 
+
 
 if (time < 0) {
 	console.log('Такого просто не может быть');
@@ -35,3 +40,14 @@ if (time < 0) {
 		} else {
 			console.log('В сутках только 24 часа!');
 		};
+
+/*while (time < 20) {
+	console.log(time);
+	time++;
+}*/
+
+/*do {
+	console.log(time);
+	time++;
+}
+while (time <20); */
