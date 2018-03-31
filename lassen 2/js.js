@@ -88,10 +88,11 @@ console.log(mainList);
 let i = 0
 while (i < 5) {
 	let a = prompt("Какой тип товара будем продавать?");
-	i++;
+	
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
-	mainList.shopGoods[Goods] = a;
+		i++;
+	mainList.shopGoods[i] = a;
 	}
 } */
 
@@ -99,10 +100,11 @@ while (i < 5) {
 let i = 0
 do {
 	let a = prompt("Какой тип товара будем продавать?");
-	i++;
+	
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
-	mainList.shopGoods[Goods] = a;
+		i++;
+	mainList.shopGoods[i] = a;
 	}
 }
 while (i < 5); */ 
