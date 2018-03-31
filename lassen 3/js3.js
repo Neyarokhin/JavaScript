@@ -22,13 +22,13 @@ let mainList = {
 	buget: money,
 	name: shopName,
 	shopGoods: Goods, 
-	employers: {},
+	employers: name,
 	open: false,
 	discount: false
 }
 
 
-function maneyDay(mainList.buget) {
+function maneyDay() {
 	alert("ежедневный бюджет " + mainList.buget / 30);
 }
 
@@ -69,33 +69,40 @@ function makeDiscount() {
 	}
 }
 
-function hireEmployers() {
-	for (let i = 1; i < 4; i++) {
-		let name = ppprompt("Имя сотрудника");
-		mainList.employers[i] = name;
+function name() {
+	for (let i = 0; i < 3; i++) {
+		let a = prompt("Имя сотрудника");
+		if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50)
+		mainList.employers[i] = a;
 	}
 }
+
+name ();
 
 console.log(mainList);
 
 //console.log("ежедневный бюджет " + mainList.buget / 30);
 
 
-/* while (Goods < 5) {
+/* 
+let i = 0
+while (i < 5) {
 	let a = prompt("Какой тип товара будем продавать?");
-	Goods++;
+	i++;
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 	mainList.shopGoods[Goods] = a;
-	i = i - 1;
+	;
 } */
 
-/*do {
+/*
+let i = 0
+do {
 	let a = prompt("Какой тип товара будем продавать?");
-	Goods++;
+	i++;
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 	mainList.shopGoods[Goods] = a;
 	i = i - 1;
 }
-while (Goods < 5); */ 
+while (i < 5); */ 
