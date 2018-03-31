@@ -70,11 +70,15 @@ function makeDiscount() {
 }
 
 function name() {
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 4; i++) {
 		let a = prompt("Имя сотрудника");
-		if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50)
+		if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		mainList.employers[i] = a;
-	}
+	}	else  {
+		i = i - 1;
+			}
+		}
+
 }
 
 name ();
