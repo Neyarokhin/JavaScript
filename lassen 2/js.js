@@ -92,7 +92,7 @@ while (i < 5) {
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 	mainList.shopGoods[Goods] = a;
-	;
+	}
 } */
 
 /*
@@ -103,6 +103,6 @@ do {
 	if ((typeof(a)) === 'string' && a !== null && a != '' && a.length < 50) {
 		console.log('Все верно!');
 	mainList.shopGoods[Goods] = a;
-	i = i - 1;
+	}
 }
 while (i < 5); */ 
