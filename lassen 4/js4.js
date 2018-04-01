@@ -25,6 +25,10 @@ let mainList = {
 			i = i - 1;
 			}
 		}
+		Goods.shift();
+
+		alert(mainList.shopGoods[i]);
+			
 
 	},	
 	workTime: function workTime(time) {
@@ -81,16 +85,22 @@ let mainList = {
 	}
 }
 
-Goods.shift();
+/*Goods.shift();
 alert(mainList.shopGoods[i]);
-mainList.shopGoods.forEach(function(item,i,arr)) {
+Goodss.forEach(function mainList.shopGoods(item,i,arr)) {
 	console.log( i + ": " + item + ("У нас вы можете купить: " + arr + ")")
-} 
+} */
 
-
-mainList.forEach(function(item,i,arr)) {
-	console.log( i + ": " + item + ("Наш магазин включает в себя: " + arr + ")")
-}
+/*let itsMainList = {
+		buget, 
+		name, 
+		shopGoods, 
+		employers, 
+		shopItems
+}*/
+for (let prop in mainList) {
+	console.log("Наш магазин включает в себя: " + mainList[prop]);
+	}
 
 console.log(mainList);
 
