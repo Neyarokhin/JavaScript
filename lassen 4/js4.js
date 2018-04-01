@@ -49,6 +49,7 @@ let mainList = {
 	start: function start() {
 		money = prompt("Ваш бюджет?", '');
 		while (isNaN(money) || money == "" || money == null) {
+			money = prompt("Ваш бюджет?", '');
 		}
 			shopName = prompt("Название вашего магазина?", '').toUpperCase();
 			time = 21;
@@ -69,33 +70,28 @@ let mainList = {
 			}
 	},
 	chooseShopItems: function chooseShopItems() {
-		for (let i = 0; i < 5; i++) {
+		 
 			let items = prompt("Перечислите через запятую ваши товары", "");
-			if ((typeof(items)) === 'string' && items !== null && items != '' && items.length < 50);{
-			mainList.shopItems[i] = items;
-			}	/*else  {
-				i = i - 1;
-			}*/	{
-		
+			while (typeof(items) !== 'string' || items == "" || items == null) {
+			items = prompt("Перечислите через запятую ваши товары", '');
+		}
+			
 		mainList.shopItems = items.split(",");
 		mainList.shopItems.push(prompt("Подождите, еще", ""));
 		mainList.shopItems.sort()
-			}
-		}
 	}
 }
-Goods.shift();
-alert(mainList.shopGoods[i]);
+
+console.log("У нас вы можете купить: ");
 
 mainList.shopItems.forEach(function (item,i,arr) {
-	console.log( i + ": " + item + ("У нас вы можете купить: " + arr + ")")
+	console.log((i + 1) + ": " + item);
 });
 
 
-
-let itsMainList = ['buget', 'name', 'shopGoods', 'employers', 'shopItems']
-for (let prop in itsMainList) {
-	console.log("Наш магазин включает в себя: " + itsMainList[prop]);
+console.log("Наш магазин включает в себя: ");
+for (let prop in mainList) {
+	console.log(prop);
 	};
 
 console.log(mainList);
