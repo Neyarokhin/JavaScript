@@ -25,9 +25,9 @@ let mainList = {
 			i = i - 1;
 			}
 		}
-		Goods.shift();
+		//Goods.shift();
 
-		alert(mainList.shopGoods[i]);
+		//alert(mainList.shopGoods[i]);
 			
 
 	},	
@@ -70,7 +70,7 @@ let mainList = {
 	},
 	chooseShopItems: function chooseShopItems() {
 		for (let i = 0; i < 5; i++) {
-		let items = prompt("Перечислите через запятую ваши товары", "");
+			let items = prompt("Перечислите через запятую ваши товары", "");
 			if ((typeof(items)) === 'string' && items !== null && items != '' && items.length < 50);{
 			mainList.shopItems[i] = items;
 			}	/*else  {
@@ -84,23 +84,19 @@ let mainList = {
 		}
 	}
 }
-
-/*Goods.shift();
+Goods.shift();
 alert(mainList.shopGoods[i]);
-Goodss.forEach(function mainList.shopGoods(item,i,arr)) {
-	console.log( i + ": " + item + ("У нас вы можете купить: " + arr + ")")
-} */
 
-/*let itsMainList = {
-		buget, 
-		name, 
-		shopGoods, 
-		employers, 
-		shopItems
-}*/
-for (let prop in mainList) {
-	console.log("Наш магазин включает в себя: " + mainList[prop]);
-	}
+mainList.shopItems.forEach(function (item,i,arr) {
+	console.log( i + ": " + item + ("У нас вы можете купить: " + arr + ")")
+});
+
+
+
+let itsMainList = ['buget', 'name', 'shopGoods', 'employers', 'shopItems']
+for (let prop in itsMainList) {
+	console.log("Наш магазин включает в себя: " + itsMainList[prop]);
+	};
 
 console.log(mainList);
 
