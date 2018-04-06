@@ -16,21 +16,6 @@ let btnOpen = document.getElementById("open-btn"),
 	hEI = document.querySelectorAll(".hire-employers-item");
 
 
-console.log(hEI);
-console.log(chooseItem);
-console.log(timeValue);
-console.log(countBudget);
-console.log(btn);
-console.log(shopGoods);
-console.log(btnOpen);
-console.log(name);
-console.log(buget);
-console.log(goods);
-console.log(items);
-console.log(employers);
-console.log(discount);
-console.log(isopen);
-
 let money,
 	shopName,
 	time,
