@@ -1,18 +1,15 @@
-let money,
-	shopName,
-	time,
-	price;
-
 let btnOpen = document.getElementById("open-btn"),
-	name = document.getElementsByClassName("name-value"),
-	buget = document.getElementsByClassName("budget-value"),
-	goods = document.getElementsByClassName("goods-value"),
-	items = document.getElementsByClassName("items-value"),
-	employers = document.getElementsByClassName("employers-value"),
-	discount = document.getElementsByClassName("discount-value"),
-	isopen = document.getElementsByClassName("isopen-value"),
+	name = document.getElementsByClassName("name-value")[0],
+	buget = document.getElementsByClassName("budget-value")[0],
+	goods = document.getElementsByClassName("goods-value")[0],
+	items = document.getElementsByClassName("items-value")[0],
+	employers = document.getElementsByClassName("employers-value"[0]),
+	discount = document.getElementsByClassName("discount-value")[0],
+	isopen = document.getElementsByClassName("isopen-value")[0],
 	shopGoods = document.getElementsByClassName("goods-item"),
-	btn = document.getElementsByTagName("button"),
+	goods_btn = document.getElementsByTagName("button")[1],
+	budget_btn = document.getElementsByTagName("button")[2],
+	employers_btn = document.getElementsByTagName("button")[3],
 	chooseItem = document.querySelector(".choose-item"),
 	timeValue = document.querySelector(".time-value"),
 	countBudget = document.querySelector(".count-budget-value"),
@@ -34,6 +31,10 @@ console.log(employers);
 console.log(discount);
 console.log(isopen);
 
+let money,
+	shopName,
+	time,
+	price;
 
 
 
