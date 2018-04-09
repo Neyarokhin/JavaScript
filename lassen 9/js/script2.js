@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 // Timer
 
-let deadline = '2018-04-08';
+let deadline = '2018-04-18';
 
 function getTimeRemaining(endtime) {
 	let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -92,7 +92,35 @@ function getTimeRemaining(endtime) {
 		document.body.style.overflow = '';
 	});
 
+	let scription_btn = document.querySelectorAll('.description-btn');
 
 
 
+	scription_btn: function btn () {
+		for (let i = 0; i < scription_btn.length; i++) {
+		scription_btn[i].addEventListener('click', showModal);
+	};
+		};
+ 		
+
+ 	function showModal() {
+
+       this.classList.add('more-splash');
+       overlay.style.display = "block";
+       document.body.style.overflow = 'hidden';
+
+   };
+
+scription_btn[0].addEventListener('click', showModal);
+scription_btn[1].addEventListener('click', showModal);
+scription_btn[2].addEventListener('click', showModal);
+scription_btn[3].addEventListener('click', showModal);
 });
+
+	/*btn[i].addEventListener('click', function() {
+		this.classList.add('more-splash');
+		overlay.style.display = "block";
+		document.body.style.overflow = 'hidden';
+	});
+*/
+
