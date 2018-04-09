@@ -61,8 +61,8 @@ function getTimeRemaining(endtime) {
 			function updateClock() {
 				let t = getTimeRemaining(endtime);
 				hours.inerHTML = t.hours;
-				minutes.inerHTML = t.minutes;
-				seconds.inerHTML = t.seconds;
+				minutes.innerHTML = t.minutes;
+				seconds.innerHTML = t.seconds;
 
 				if (t.total <= 0) {
 					clearInterval(timeInterval);
