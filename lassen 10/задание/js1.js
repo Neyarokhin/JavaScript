@@ -15,7 +15,7 @@ class option {
 
 		div.innerHTML = 'Quatsch';
 
-		div.style.cssText = `height:${this.height}; width:${this.width}; background-color:${this.bg}; font-size:${this.fontSize}; text-alagn:${this.textAlign};`;
+		div.style.cssText = `height:${this.height}; width:${this.width}; background-color:${this.bg}; font-size:${this.fontSize}; text-alaign:${this.textAlign};`;
 
 		document.body.appendChild(div);
 	}
