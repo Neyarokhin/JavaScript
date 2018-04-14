@@ -1,24 +1,29 @@
 class option { 
 	constructor(height, width, bg, fontSize, textAlign) {
-		this.height = '300',
-		this.width = '400',
-		this.bg = 'green',
-		this.fontSize = '50px',
-		this.textAlign = 'center';
+		this.height = height,
+		this.width = width,
+		this.bg = bg,
+		this.fontSize = fontSize,
+		this.textAlign = textAlign;
 	}
+
+
+
 
 	createDiv() {
 		let div = document.createElement('div');
 
 		div.innerHTML = 'Quatsch';
 
-		div.style.cssText = `height:${this.height}; width${this.width}; background-color:${this.dg}; font-size:${this.fontSize}; text-alagin:${this.textAlign};`;
+		div.style.cssText = `height:${this.height}; width:${this.width}; background-color:${this.bg}; font-size:${this.fontSize}; text-alagn:${this.textAlign};`;
 
 		document.body.appendChild(div);
 	}
 }
 
-let obj = new option;
+
+
+const obj = new option('300','400', 'green', '50px', 'center');
 
 obj.createDiv();
 
