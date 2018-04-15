@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function() {
 
 	let tab = document.getElementsByClassName('info-header-tab'),
 		tabContent = document.getElementsByClassName('info-tabcontent'),
@@ -141,7 +141,7 @@ scription_btn[3].addEventListener('click', showModal);
 
 			request.send(formData);
 
-			request.onreadystatecheange = function() {
+			request.onreadystatechange = function() {
 				if (request.readyState < 4) {
 					statusMassage.innerHTML = message.loading;	
 				} else if (request.readyState === 4) {
@@ -155,7 +155,7 @@ scription_btn[3].addEventListener('click', showModal);
 				}
 			}
 			for (let i = 0; i < input.length; i++) {
-				input.value = '';
+				input[i].value = '';
 				//Очищаем поля ввода
 			}
 		});
@@ -163,9 +163,14 @@ scription_btn[3].addEventListener('click', showModal);
 		let newForm = document.getElementById('form'),
 			newInput = newForm.getElementsByTagName('input');
 
+
+			newForm.addEventListener('submit', function(event) {
+			event.preventDefault();
+			newForm.appendChild(statusMassage);
+
 			//AJAX
 			let newRequest = new XMLHttpRequest();
-			newRequest.open("POST", 'server.php')
+			newRequest.open("POST", 'server.php');
 
 			newRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
@@ -173,7 +178,7 @@ scription_btn[3].addEventListener('click', showModal);
 
 			newRequest.send(formData);
 
-			newRequest.onreadystatecheange = function() {
+			newRequest.onreadystatechange = function() {
 				if (newRequest.readyState < 4) {
 					statusMassage.innerHTML = message.loading;	
 				} else if (newRequest.readyState === 4) {
@@ -187,9 +192,9 @@ scription_btn[3].addEventListener('click', showModal);
 				}
 			}
 			for (let i = 0; i < newInput.length; i++) {
-				newInput.value = '';
+				newInput[i].value = '';
 			}
-
+		});
 });
 
 	
