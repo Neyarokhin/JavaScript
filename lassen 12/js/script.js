@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('.col-sm-7').on('click', function(){
+	$('[href="#sheldure"]').on('click', function(){
 
 		$('.overlay').fadeToggle('slow');
 		$('.modal').animate(
