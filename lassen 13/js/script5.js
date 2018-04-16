@@ -256,44 +256,42 @@ scription_btn[3].addEventListener('click', showModal);
 
 		//Calc
 
-		let persons = document.getElementsByClassName('counter-block-input')[0],
-			restDays = document.getElementsByClassName('counter-block-input')[1],
-			place = document.getElementById('select'),
-			totalValue = document.getElementById('total'),
-			personsSum = 0,
-			daysSum = 0,
-			total = 0;
-
-			totalValue.innerHTML = 0;
-
-			persons.addEventListener('change', function() {
-				personsSum = +this.value;
-				total = (daysSum + personsSum)*4000;
-				if (restDays.value == '' || isNaN(parseInt(this.value)) == true || personsSum % 1 != 0 || daysSum % 1 != 0 || personsSum <= 0 || daysSum <= 0){
-					totalValue.innerHTML = 0;
-				} else {
-					totalValue.inerHTML = total;
-				}
-			});
-
-			restDays.addEventListener('change', function() {
-				daysSum = +this.value;
-				total = (daysSum + personsSum)*4000;
-				if (persons.value == '' || isNaN(parseInt(this.value)) == true || personsSum % 1 != 0 || daysSum % 1 != 0 || personsSum <= 0 || daysSum <= 0){
-					totalValue.innerHTML = 0;
-				} else {
-					totalValue.inerHTML = total;
-				}
-			});
-
-			place.addEventListener('change', function() {
-				if (restDays.value == '' || persons.value == '') {
-					totalValue.innerHTML = 0;
-				} else {
-					let a = total;
-					totalValue.innerHTML = a * this.options[this.selectedIndex].value;
-				}
-			});
+		 let persons = document.getElementsByClassName('counter-block-input')[0],
+		        restDays = document.getElementsByClassName('counter-block-input')[1],
+		        place = document.getElementById('select'),
+		        totalValue = document.getElementById('total'),
+		        personsSum = 0,
+		        daysSum = 0,
+		        total = 0;
+		    totalValue.innerHTML = 0;
+		    persons.addEventListener('change', function() {
+		        personsSum = parseInt(this.value);
+		        this.value = personsSum;
+		        total = (daysSum + personsSum)*4000;
+		        if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
+		            totalValue.innerHTML = 0;
+		        } else {
+		            totalValue.innerHTML = total * place.options[place.selectedIndex].value;
+		        }
+		    });
+		    restDays.addEventListener('change', function() {
+		        daysSum = parseInt(this.value);
+		        this.value = daysSum;
+		        total = (daysSum + personsSum)*4000;
+		        if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
+		            totalValue.innerHTML = 0;
+		        } else {
+		            totalValue.innerHTML = total * place.options[place.selectedIndex].value;
+		        }
+		    });
+		    place.addEventListener('change', function() {
+		        if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
+		            totalValue.innerHTML = 0;
+		        } else {
+		            let a = total;
+		            totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+		        }
+		    });
 
 
 });
